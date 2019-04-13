@@ -673,6 +673,29 @@ var x = setInterval(function() {
            });
         });
       </script>
+			<script>
+    console.log("wts clicked");
+        $(document).ready(function() {
+            console.log("wts clicked");
+            var userName = getQueryVariable('name');
+           $('#faceclik').on("click", function(e) {
+             if(userName==''){
+               alert("The name is null");
+             }
+             {
+              if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+                console.log("clicked  "+userName);
+                  var article = $(this).attr(userName);
+                  var whatsapp_url = " https://www.facebook.com/sharer/sharer.php?u=https://anands9288907423.github.io/vishu/?name="+userName;
+		   window.location.href= whatsapp_url;
+              }else{
+                   alert('You Are Not On A Mobile Device. Please Use This Button To Share On Mobile');
+              }
+             }
+           });
+        });
+      </script>
+	
 </body>
  
 <center>
@@ -680,7 +703,7 @@ var x = setInterval(function() {
  <img width="22px" height="22px" src="https://goo.gl/ReKHXA"/>  
  <b style="font-size: 26px;">Share</b>  
 </a>
- <a class="footerbtn1" href="https://www.facebook.com/sharer/sharer.php?u= *YOURWEBSITE.COM*" target="_blank" title="Share this post on Facebook" class="facebook">
+ <a id="faceclik"class="footerbtn1" href="https://www.facebook.com/sharer/sharer.php?u= *YOURWEBSITE.COM*" target="_blank" title="Share this post on Facebook" class="facebook">
 	<img width="22px" height="22px" src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/social-facebook-icon.png"/>  
  <b style="font-size: 26px;">Share</b>  
  </a>
